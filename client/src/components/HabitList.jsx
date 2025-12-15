@@ -1,10 +1,11 @@
+
 import React from "react";
 import { markHabitComplete } from "../utils/utils";
 
 function HabitList({ habits, setHabits }) {
   const handleCheckbox = (habitId) => {
     const today = new Date();
-    markHabitComplete(habitId, today);
+    markHabitComplete(habitId, today, habits, setHabits);
   }
   
   return (
